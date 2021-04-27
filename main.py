@@ -1,7 +1,22 @@
 #!/usr/bin/python3
+def calc(x,y,op):
+  try:
+    x, y = int(x), int(y)
+    return{
+      '+': x + y,
+      '-': x - y,
+      '*': x * y,
+      '/': x // y,
+      '%': x % y,
+    }.get(op)
+  except:
+    raise
 
-dic = {'Name': 'Turtle', 'Age': 7}
 
-print ("Nome : {: >14}".format(dic.get('Name', "Never")))
-print ("Idade : {: >8}".format(dic.get('Age')))
-print ("Escolaridade : {}".format(dic.get('Education', "Never")))
+print(calc(5,2,'+'))
+print(calc(5,2,'-'))
+print(calc(5,2,'*'))
+print(calc(5,2,'/'))
+print(calc(5,2,'%'))
+print(calc(5,2, 'a'))
+print(calc(5,2, '**'))
