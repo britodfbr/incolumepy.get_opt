@@ -8,7 +8,7 @@ def calc(x,y,op):
       '*': x * y,
       '/': x // y,
       '%': x % y,
-    }.get(op)
+    }.get(op, "Error")
   except:
     raise
 
